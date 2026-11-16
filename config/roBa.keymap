@@ -22,6 +22,14 @@
     //     wait-ms = <5>;
     //     tap-ms = <5>;
     // };
+
+    zoom {
+        layers = <6>;
+        bindings = <&none>, <&none>, <&kp LG(EQUAL)>, <&kp LG(MINUS)>;
+        tick = <50>;
+        wait-ms = <5>;
+        tap-ms = <5>;
+    };
 };
 
 / {
@@ -112,7 +120,7 @@
         default_layer {
             bindings = <
 &kp ESCAPE        &kp W         &kp E         &kp R                   &kp T                                                 &kp Y        &kp U    &kp I  &kp O      &kp P
-&kp Q             &kp A         &kp S         &kp D                   &kp F        &kp LS(LG(S))             &kp MINUS      &kp G        &lt 4 H  &kp J  &kp K      &kp L
+&kp Q             &kp A         &kp S         &kp D                   &kp F        &kp LS(LG(S))             &kp MINUS      &kp G        &lt 4 H  &kp J  &lt 6 K    &kp L
 &kp LEFT_SHIFT    &kp Z         &kp X         &kp C                   &kp V        &kp COLON                 &kp SEMICOLON  &kp B        &kp N    &kp M  &kp COMMA  &kp PERIOD
 &kp LEFT_COMMAND  &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 5 LANG2  &lt 1 LANG1  &lt_bspc 2 BACKSPACE      &kp KP_ENTER   &lt 3 SPACE                             &kp F3
             >;
@@ -164,6 +172,15 @@
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
+            >;
+        };
+
+        ZOOM {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
     };
